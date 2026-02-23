@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recursos Universitarios</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <header class="navbar">
+    <div class="logo">📚 UniRecursos</div>
+
+    <nav id="menu">
+        <a href="#">Inicio</a>
+        <a href="#">Categorías</a>
+        <a href="#">Sobre Nosotros</a>
+    </nav>
+
+    <div class="acciones">
+        <button id="darkBtn">🌙</button>
+        <div class="hamburguesa" id="hamburguesa">
+            ☰
+        </div>
+    </div>
+</header>
+
+<div class="hero">
+    <h1>Recursos Universitarios</h1>
+    <input type="text" id="buscador" placeholder="Buscar recurso...">
+</div>
+
+<div class="categorias">
+    <button class="cat-btn" data-cat="todos">Todos</button>
+    <button class="cat-btn" data-cat="estadistica">Estadística</button>
+    <button class="cat-btn" data-cat="informatica">Informática</button>
+    <button class="cat-btn" data-cat="basedatos">Base de Datos</button>
+</div>
+
+
+    <section class="contenedor">
+
+        <div class="card" data-cat="estadistica">
+    <h3>Ejercicios de Estadística</h3>
+    <p>Ejercicios resueltos paso a paso en PDF.</p>
+    <p class="contador">📥 Descargas: <span id="cont1">0</span></p>
+    <a href="descarga.html">
+        <button>Descargar</button>
+    </a>
+</div>
+
+
+            <div class="card" data-cat="informatica">
+            <h3>Proyecto HTML Básico</h3>
+            <p>Plantilla lista para entregar.</p>
+            <p class="contador">📥 Descargas: <span id="cont2">0</span></p>
+            <a href="descarga.html">
+    <button>Descargar</button>
+</a>
+
+        </div>
+
+
+            <div class="card" data-cat="basedatos">
+            <h3>Trabajo Base de Datos</h3>
+            <p>Documento Word editable.</p>
+            <p class="contador">📥 Descargas: <span id="cont3">0</span></p>
+            <a href="descarga.html">
+    <button>Descargar</button>
+</a>
+
+        </div>
+
+    </section>
+
+<script src="js/main.js"></script>
+</body>
+</html>

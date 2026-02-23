@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Preparando descarga...</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body style="text-align:center; padding-top:100px;">
+
+    <h2>⏳ Preparando tu descarga...</h2>
+    <p>Espera <span id="contador">5</span> segundos</p>
+
+    <button id="btnDescarga" disabled>
+        Descargar ahora
+    </button>
+
+<script>
+let tiempo = 5;
+let contador = document.getElementById("contador");
+let boton = document.getElementById("btnDescarga");
+
+let intervalo = setInterval(() => {
+    tiempo--;
+    contador.textContent = tiempo;
+
+    if (tiempo <= 0) {
+        clearInterval(intervalo);
+        boton.disabled = false;
+        boton.textContent = "Descargar ahora";
+        boton.onclick = () => {
+            window.location.href = "recursos/estadistica1.pdf";
+        }
+    }
+}, 1000);
+</script>
+
+</body>
+</html>
